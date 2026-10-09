@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block titulo %}Évhira | Apps que chamam seus clientes de volta{% endblock %}
+{% block descricao %}Apps simples que reativam a carteira de clientes parada e buscam novos contatos, com o dono no controle de cada passo. Por Eliane Amorim, Évhira.{% endblock %}
+
+{% block corpo %}
+<header class="topo contido">
+  <a class="marca" href="#inicio">Évhira</a>
+  <nav class="topo-nav" aria-label="Seções da página">
+    <a href="#dor">O cenário</a>
+    <a href="#demo">O app</a>
+    <a href="#quem">Quem sou</a>
+  </nav>
+  <a class="btn btn-primary" href="{{ whatsapp_url }}" target="_blank" rel="noopener">
+    <i class="ph-bold ph-whatsapp-logo icon" aria-hidden="true"></i>
+    <span>Falar no WhatsApp</span>
+  </a>
+</header>
+
+<main class="pagina">
+
+  <section class="secao hero" id="inicio">
+    <div class="hero-texto">
+      <p class="eyebrow">Inteligência operacional para PMEs</p>
+      <h1>Seus clientes parados podem voltar a comprar.</h1>
+      <p class="lead">Eu construo apps simples que chamam de volta a sua carteira de clientes e buscam novos contatos. Você vê cada passo e decide o ritmo.</p>
+      <div class="acoes">
+        <a class="btn btn-primary" href="{{ whatsapp_url }}" target="_blank" rel="noopener">
+          <i class="ph-bold ph-whatsapp-logo icon" aria-hidden="true"></i>
+          <span>Conversar no WhatsApp</span>
+        </a>
+        <a class="btn" href="#demo">
+          <span>Ver o app</span>
+          <i class="ph-bold ph-arrow-down icon" aria-hidden="true"></i>
+        </a>
+      </div>
+      <ul class="selos">
+        <li><i class="ph ph-briefcase icon icon-accent" aria-hidden="true"></i> Mais de 20 anos em gestão e operações</li>
+        <li><i class="ph ph-eye icon icon-accent" aria-hidden="true"></i> Você no controle de tudo</li>
+        <li><i class="ph ph-stack icon icon-accent" aria-hidden="true"></i> Funciona em qualquer nicho</li>
+      </ul>
+    </div>
+    <div class="hero-marca">
+      <img src="{{ url_for('static', filename='img/evhira-logo.jpg') }}" width="1254" height="1254" alt="Logo da Évhira: espiral dourada sobre fundo azul-marinho">
+    </div>
+  </section>
+
+  <section class="secao" id="dor">
+    <p class="eyebrow">O cenário</p>
+    <h2>Você se reconhece aqui?</h2>
+    <p class="lead">Sua empresa tem clientes e tem demanda. Mas por dentro, quase tudo ainda depende da sua memória e da sua presença.</p>
+    <div class="grade grade-4">
+      <article class="cd">
+        <i class="ph ph-users-three icon-lg icon-accent" aria-hidden="true"></i>
+        <h3 class="cd-titulo">Tem cliente que sumiu</h3>
+        <p>Comprou uma vez, parou de comprar e ninguém voltou a chamar.</p>
+      </article>
+      <article class="cd">
+        <i class="ph ph-hand-pointing icon-lg icon-accent" aria-hidden="true"></i>
+        <h3 class="cd-titulo">Tudo passa por você</h3>
+        <p>Decisões, dúvidas e aprovações ficam esperando você aparecer.</p>
+      </article>
+      <article class="cd">
+        <i class="ph ph-currency-circle-dollar icon-lg icon-accent" aria-hidden="true"></i>
+        <h3 class="cd-titulo">O dinheiro some sem explicação</h3>
+        <p>Você fatura, mas no fim do mês o saldo não bate e você não sabe por onde escapou.</p>
+      </article>
+      <article class="cd">
+        <i class="ph ph-folders icon-lg icon-accent" aria-hidden="true"></i>
+        <h3 class="cd-titulo">A informação está espalhada</h3>
+        <p>WhatsApp, planilha, caderno e memória. Cada um guarda um pedaço.</p>
+      </article>
+    </div>
+    <article class="cd cd-grande destaque">
+      <i class="ph ph-shield-check icon-xl icon-accent" aria-hidden="true"></i>
+      <div class="destaque-texto">
+        <h3 class="cd-titulo">E se automatizar fizesse você perder o controle?</h3>
+        <p>É o medo mais comum que eu ouço, e ele faz sentido. Por isso eu organizo o processo primeiro e só depois automatizo. No app que mostro abaixo, você vê tudo na tela: quem foi chamado, o que foi dito e quem respondeu. É esse o nível de clareza que eu busco em qualquer app que construo.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="secao" id="demo">
+    <p class="eyebrow">A demonstração</p>
+    <h2>O app de prospecção</h2>
+    <p class="lead">Foi feito para uma representação de pescados, e as mensagens que aparecem nas telas são exemplos que você edita para o seu negócio. Serve para qualquer empresa que tenha carteira de clientes. Estas são as telas dele funcionando.</p>
+    <ul class="selos">
+      <li><i class="ph ph-check-circle icon icon-accent" aria-hidden="true"></i> Importa contatos por planilha, agenda do celular ou WhatsApp</li>
+      <li><i class="ph ph-check-circle icon icon-accent" aria-hidden="true"></i> Reduz o risco de bloqueio do seu número</li>
+      <li><i class="ph ph-check-circle icon icon-accent" aria-hidden="true"></i> Respeita quem pede para sair da lista</li>
+    </ul>
+
+    <div class="beat">
+      <div class="beat-cabeca">
+        <p class="eyebrow">1. A dor</p>
+        <h3>Uma carteira parada e ninguém para chamar</h3>
+        <p>Quase todo negócio tem uma lista de clientes que comprou e sumiu. Chamar um por um toma tempo, e por isso a lista fica esquecida. Na demonstração são 373 contatos, e 369 nunca receberam uma mensagem.</p>
+      </div>
+      <figure class="cd tela">
+        <a class="tela-link" href="{{ url_for('static', filename='img/tela-carteira.webp') }}" target="_blank" rel="noopener">
+          <img src="{{ url_for('static', filename='img/tela-carteira.webp') }}" width="1200" height="307" loading="lazy" alt="Painel do app mostrando 373 contatos na carteira, dos quais 369 ainda não foram contatados">
+        </a>
+        <figcaption>Painel inicial do app: o tamanho da carteira e quantos ainda não foram chamados.</figcaption>
+      </figure>
+    </div>
+
+    <div class="beat">
+      <div class="beat-cabeca">
+        <p class="eyebrow">2. O que eu construí</p>
+        <h3>Um app que busca, chama e oferece</h3>
+        <p>Três telas fazem o trabalho repetitivo no seu lugar.</p>
+      </div>
+      <div class="grade grade-3">
+        <figure class="cd tela">
+          <a class="tela-link" href="{{ url_for('static', filename='img/tela-garimpo.webp') }}" target="_blank" rel="noopener">
+            <img src="{{ url_for('static', filename='img/tela-garimpo.webp') }}" width="1200" height="696" loading="lazy" alt="Tela Garimpo de leads, com a busca de comércios no Google Maps e a lista de resultados">
+          </a>
+          <figcaption>
+            <h4 class="cd-titulo">Acha novos contatos</h4>
+            <p>Você diz o que procurar e a cidade. O app busca no Google Maps comércios com telefone e junta tudo numa lista.</p>
+          </figcaption>
+        </figure>
+        <figure class="cd tela">
+          <a class="tela-link" href="{{ url_for('static', filename='img/tela-robo.webp') }}" target="_blank" rel="noopener">
+            <img src="{{ url_for('static', filename='img/tela-robo.webp') }}" width="1200" height="737" loading="lazy" alt="Tela do robô de reativação, ligado, com a régua de mensagens que o dono escreve">
+          </a>
+          <figcaption>
+            <h4 class="cd-titulo">Chama de volta no ritmo certo</h4>
+            <p>Uma régua de mensagens que você escreve. O robô envia um contato de cada vez, com intervalo diferente, só em horário comercial e até um limite por dia.</p>
+          </figcaption>
+        </figure>
+        <figure class="cd tela">
+          <a class="tela-link" href="{{ url_for('static', filename='img/tela-oferta.webp') }}" target="_blank" rel="noopener">
+            <img src="{{ url_for('static', filename='img/tela-oferta.webp') }}" width="1200" height="738" loading="lazy" alt="Tela Oferta da semana, onde o dono escreve a mensagem e dispara para os clientes ativos">
+          </a>
+          <figcaption>
+            <h4 class="cd-titulo">Avisa os clientes da novidade</h4>
+            <p>Você escreve a oferta da semana uma vez e o app envia para os seus clientes ativos, no mesmo ritmo.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="beat">
+      <div class="beat-cabeca">
+        <p class="eyebrow">3. O controle que você ganha</p>
+        <h3>Você vê tudo e assume quando quiser</h3>
+        <p>Nada acontece escondido. O painel mostra os números do dia, e quem responde aparece como lead quente para você assumir a conversa.</p>
+      </div>
+      <div class="grade grade-2">
+        <figure class="cd tela">
+          <a class="tela-link" href="{{ url_for('static', filename='img/tela-painel.webp') }}" target="_blank" rel="noopener">
+            <img src="{{ url_for('static', filename='img/tela-painel.webp') }}" width="1200" height="746" loading="lazy" alt="Painel do app com os números do dia e a lista de leads quentes que responderam">
+          </a>
+          <figcaption>
+            <h4 class="cd-titulo">Os números do dia</h4>
+            <p>Quantos foram chamados, quem respondeu e quem pediu para parar, tudo numa tela.</p>
+          </figcaption>
+        </figure>
+        <figure class="cd tela">
+          <a class="tela-link" href="{{ url_for('static', filename='img/tela-conversa.webp') }}" target="_blank" rel="noopener">
+            <img src="{{ url_for('static', filename='img/tela-conversa.webp') }}" width="1200" height="730" loading="lazy" alt="Tela de uma conversa com as mensagens enviadas e recebidas e o campo para responder">
+          </a>
+          <figcaption>
+            <h4 class="cd-titulo">Você assume a conversa</h4>
+            <p>Cada mensagem enviada e recebida fica registrada. Quando o cliente responde, você continua a conversa pelo app ou pelo WhatsApp e pode marcar quem não quer receber.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="cta-direita">
+      <a class="btn btn-primary" href="{{ whatsapp_url }}" target="_blank" rel="noopener">
+        <i class="ph-bold ph-whatsapp-logo icon" aria-hidden="true"></i>
+        <span>Quero um app assim</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="secao" id="quem">
+    <p class="eyebrow">Quem está por trás</p>
+    <h2>Eliane Amorim</h2>
+    <div class="quem">
+      <div class="quem-texto">
+        <p>Tenho mais de 20 anos de experiência em gestão e operações. Passei quase 10 anos como gestora de contratos no Sebrae-SP, coordenando contratos terceirizados em dezenas de unidades, com indicadores, fornecedores e processos em que uma falha custava caro.</p>
+        <p>Aprendi que o problema quase nunca é falta de esforço. É falta de processo claro, de responsável definido e de informação no mesmo lugar. Por isso a minha abordagem é simples: organizo o processo primeiro e automatizo depois, sempre pensando em resultado, clareza e controle.</p>
+      </div>
+      <ul class="cd cred">
+        <li><i class="ph ph-graduation-cap icon-md icon-accent" aria-hidden="true"></i> MBA em Gestão Financeira</li>
+        <li><i class="ph ph-graduation-cap icon-md icon-accent" aria-hidden="true"></i> Pós-graduação em Gestão Empresarial</li>
+        <li><i class="ph ph-briefcase icon-md icon-accent" aria-hidden="true"></i> Mais de 20 anos em gestão e operações</li>
+        <li><i class="ph ph-seal-check icon-md icon-accent" aria-hidden="true"></i> Gestora de contratos no Sebrae-SP por quase 10 anos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao" id="contato">
+    <article class="cd cd-grande chamada">
+      <h2>Vamos conversar sobre o seu negócio?</h2>
+      <p class="lead">Sem compromisso. Me conta onde está o gargalo e eu digo se o app faz sentido para você.</p>
+      <div class="cta-direita">
+        <a class="btn" href="mailto:{{ email_contato }}">
+          <i class="ph ph-envelope-simple icon" aria-hidden="true"></i>
+          <span>{{ email_contato }}</span>
+        </a>
+        <a class="btn btn-primary" href="{{ whatsapp_url }}" target="_blank" rel="noopener">
+          <i class="ph-bold ph-whatsapp-logo icon" aria-hidden="true"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer class="rodape contido">
+  <span>© 2026 Évhira. Todos os direitos reservados.</span>
+  <a href="mailto:{{ email_contato }}">{{ email_contato }}</a>
+</footer>
+{% endblock %}

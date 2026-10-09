@@ -1,0 +1,188 @@
+/* Card base (Padrao_Box_Card): padding, borda, raio e sombra por token */
+.cd {
+  background: var(--surface);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: var(--sp-4);
+  box-shadow: var(--sombra-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.cd-grande { padding: var(--sp-5); }
+
+.grade > .cd { height: 100%; }
+
+/* Card clicavel: hover muda borda, sombra e posicao. Nunca o background. */
+.cd-clicavel {
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.cd-clicavel:hover {
+  border-color: var(--accent);
+  box-shadow: var(--sombra);
+  transform: translateY(-2px);
+}
+
+.cd-titulo {
+  font-family: var(--font-titulo);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+/* Botoes */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  height: 40px;
+  padding: 0 var(--sp-4);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-sm);
+  background: transparent;
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--texto-sobre-accent);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* Icones Phosphor: tamanho e cor sempre por classe */
+.icon { font-size: 1.1rem; line-height: 1; display: inline-flex; vertical-align: middle; }
+.icon-sm { font-size: 0.9rem; }
+.icon-md { font-size: 1.25rem; }
+.icon-lg { font-size: 1.75rem; }
+.icon-xl { font-size: 2.5rem; }
+.icon-accent { color: var(--accent); }
+.icon-muted { color: var(--text-dim); }
+
+/* Textos da página */
+h1 { font-size: clamp(28px, 5vw, 44px); }
+h2 { font-size: clamp(22px, 3.5vw, 32px); }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.lead {
+  color: var(--text-dim);
+  font-size: var(--fs-lg);
+  max-width: 62ch;
+}
+
+.marca {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  font-size: var(--fs-xl);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.topo-nav a {
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  transition: var(--transicao);
+}
+
+.topo-nav a:hover { color: var(--text); }
+
+.selos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+}
+
+.selos li { display: inline-flex; align-items: center; gap: var(--sp-2); }
+
+.hero-marca {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-lg);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  background: var(--surface);
+}
+
+.hero-marca img { display: block; width: 100%; height: auto; }
+
+/* Bloco de destaque: ícone ao lado do texto */
+.destaque {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--sp-5);
+  border-color: var(--accent-sombra);
+  background: var(--accent-soft);
+}
+
+.destaque-texto { display: flex; flex-direction: column; gap: var(--sp-2); }
+
+.cred {
+  list-style: none;
+  margin: 0;
+  gap: var(--sp-4);
+}
+
+.cred li { display: flex; align-items: center; gap: var(--sp-3); }
+
+.chamada { align-items: stretch; }
+
+.btn:hover { border-color: var(--accent); }
+
+.rodape a { color: var(--text-dim); }
+
+@media (max-width: 640px) {
+  .destaque { flex-direction: column; align-items: flex-start; gap: var(--sp-3); }
+}
+
+/* Tela do app dentro de um cartão: imagem em cima, legenda embaixo */
+.tela { margin: 0; }
+
+.tela-link { display: block; line-height: 0; }
+
+.tela img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-sm);
+}
+
+.tela figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  flex: 1;
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+}
+
+.tela figcaption p { color: var(--text-dim); }
+.tela .cd-titulo { color: var(--text); }

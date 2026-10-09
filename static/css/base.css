@@ -1,0 +1,43 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* CRITICO: sem isso, form vai pra Arial/-apple-system */
+button, input, select, textarea { font-family: inherit; }
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-titulo);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--text);
+  line-height: 1.2;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+a { color: var(--accent); }
+
+img { max-width: 100%; height: auto; }
+
+/* Foco visível para quem navega pelo teclado */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

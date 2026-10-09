@@ -1,0 +1,134 @@
+/* A PAGINA e dona do espaço entre blocos (Padrao_Espacamento_e_Respiro):
+   o container declara o gap, nenhum bloco carrega margem inferior. */
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-5);
+  min-width: 0;
+}
+
+/* Item de flex nasce com min-width auto; sem isto, conteudo largo empurra a pagina de lado. */
+.pagina > * { min-width: 0; }
+
+/* Cards irmaos: mesma altura (Padrao_Box_Card) */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--sp-4);
+  align-items: stretch;
+}
+
+/* Acao primaria ancorada na direita do bloco (Acao_Primaria_a_Direita):
+   a ancora mora no CSS do container, nunca no botao. */
+.cta-direita {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--sp-3);
+}
+
+/* Faixa de largura máxima para topo e rodapé, alinhada com a .pagina */
+.contido {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding-top: var(--sp-4);
+  padding-bottom: var(--sp-4);
+}
+
+.topo-nav {
+  display: flex;
+  gap: var(--sp-5);
+  margin-left: auto;
+  margin-right: var(--sp-4);
+}
+
+/* Cada seção é uma coluna com respiro próprio; o espaço ENTRE seções é o gap da .pagina */
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-5) 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: var(--sp-6);
+}
+
+.hero-texto { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.acoes { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+
+.quem {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: start;
+  gap: var(--sp-5);
+}
+
+.quem-texto { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  padding-top: var(--sp-5);
+  padding-bottom: var(--sp-6);
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 860px) {
+  .hero, .quem { grid-template-columns: 1fr; }
+  .hero-marca { max-width: 360px; width: 100%; justify-self: center; }
+}
+
+@media (max-width: 640px) {
+  .topo-nav { display: none; }
+  .pagina, .contido { padding-left: var(--sp-4); padding-right: var(--sp-4); }
+  .cta-direita { flex-wrap: wrap; }
+}
+
+/* Quatro cartões: 4 lado a lado, 2 por linha no tablet, 1 no celular (nunca 3 + 1 solto) */
+.grade-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1000px) {
+  .grade-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grade-4 { grid-template-columns: 1fr; }
+}
+
+/* Três cartões: 3 lado a lado, 1 por linha abaixo de 900px (nunca 2 + 1 solto) */
+.grade-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 900px) {
+  .grade-3 { grid-template-columns: 1fr; }
+}
+
+/* Três tempos da demonstração: cada um é uma coluna com cabeça de texto e telas */
+.beat { display: flex; flex-direction: column; gap: var(--sp-4); padding-top: var(--sp-4); }
+
+.beat-cabeca { display: flex; flex-direction: column; gap: var(--sp-2); max-width: 68ch; }
+
+.grade-2 { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 760px) {
+  .grade-2 { grid-template-columns: 1fr; }
+}

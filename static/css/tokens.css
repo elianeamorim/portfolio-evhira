@@ -1,0 +1,50 @@
+/* Tokens do Portfolio Évhira. Único arquivo onde o hex da marca pode aparecer.
+   Familia --accent (projeto isolado, preset escuro). Rampa derivada por paleta.py (LASTRO). */
+:root {
+  /* Marca: dourado Évhira */
+  --accent: #C9A84C;
+  --accent-hover: #D2B76B;
+  --accent-escura: #8E742B;
+  --accent-suave: #F8F4E7;
+  --accent-soft: rgba(201, 168, 76, 0.12);
+  --accent-sombra: rgba(201, 168, 76, 0.15);
+  --accent-texto: #866E29;
+  --texto-sobre-accent: #000000;
+
+  /* Superfícies Évhira (tema escuro fixo) */
+  --bg: #080E1D;
+  --surface: #0F1829;
+  --border: #1E2A3F;
+  --borda: var(--border);
+  --text: #F5F0E8;
+  --text-dim: #7A849A;
+
+  /* Tipografia */
+  --font: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-titulo: "Sora", "Inter", sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-base: 15px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
+  --fs-2xl: 26px;
+
+  /* Espaçamento (Padrao_Espacamento_e_Respiro) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+
+  /* Raio, sombra e movimento (Padrao_Box_Card) */
+  --raio-sm: 8px;
+  --raio: 12px;
+  --raio-lg: 18px;
+  --raio-full: 9999px;
+  --sombra-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sombra: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --transicao: 0.18s ease;
+
+  --largura-max: 1120px;
+}

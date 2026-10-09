@@ -1,0 +1,25 @@
+.git
+.gitignore
+.env
+.env.example
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+.vscode
+.idea
+.claude/
+README.md
+CLAUDE.md
+docs/
+
+# Nao roda dentro do container
+testes/
+00_GENESIS/
+z_Versoes/
+backups/
+*.zip
+gerar_versao.bat
+gerar_versao.command
+restaurar_ultima_versao.bat
+restaurar_ultima_versao.command

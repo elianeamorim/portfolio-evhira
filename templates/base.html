@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Évhira{% endblock %}</title>
+  <meta name="description" content="{% block descricao %}Évhira{% endblock %}">
+  <link rel="icon" href="{{ url_for('static', filename='img/evhira-logo.jpg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fonts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='phosphor/regular/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='phosphor/bold/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+</head>
+<body>
+  {% block corpo %}{% endblock %}
+</body>
+</html>

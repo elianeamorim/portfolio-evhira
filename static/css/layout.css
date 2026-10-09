@@ -24,6 +24,11 @@
 
 /* Acao primaria ancorada na direita do bloco (Acao_Primaria_a_Direita):
    a ancora mora no CSS do container, nunca no botao. */
+.voltar {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .cta-direita {
   display: flex;
   justify-content: flex-end;

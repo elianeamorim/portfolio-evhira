@@ -12,7 +12,7 @@
   --texto-sobre-accent: #000000;
 
   /* Superfícies Évhira (tema escuro fixo) */
-  --bg: #080E1D;
+  --bg: #010715; /* igual ao fundo do logotipo (medido: #010715) */
   --surface: #0F1829;
   --border: #1E2A3F;
   --borda: var(--border);

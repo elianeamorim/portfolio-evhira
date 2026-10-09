@@ -18,7 +18,7 @@
 Token: `--accent` (e -hover, -escura, -suave, -soft, -sombra, -texto), em `static/css/tokens.css`
 Cor da marca: `#C9A84C` (dourado)
 Tema: escuro fixo (sem alternador), pra casar com a marca Évhira (evhira.com)
-Superfícies: `--bg: #080E1D` (marinho), `--surface: #0F1829`, `--text: #F5F0E8` (creme)
+Superfícies: `--bg: #010715` (igual ao fundo do logotipo), `--surface: #0F1829`, `--text: #F5F0E8` (creme)
 Fontes: Inter (base) + Sora (títulos), self-host em `static/fonts/`
 Ícones: Phosphor self-host em `static/phosphor/` (pesos regular e bold). Zero CDN, zero emoji.
 PROIBIDO: o hex `#C9A84C` aparecer em qualquer template

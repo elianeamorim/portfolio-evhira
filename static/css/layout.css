@@ -22,13 +22,14 @@
   align-items: stretch;
 }
 
-/* Acao primaria ancorada na direita do bloco (Acao_Primaria_a_Direita):
-   a ancora mora no CSS do container, nunca no botao. */
+/* Link discreto de voltar ao topo, ancorado na direita do fim da secao */
 .voltar {
   display: flex;
   justify-content: flex-end;
 }
 
+/* Acao primaria ancorada na direita do bloco (Acao_Primaria_a_Direita):
+   a ancora mora no CSS do container, nunca no botao. */
 .cta-direita {
   display: flex;
   justify-content: flex-end;
@@ -91,6 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: var(--sp-3);
   padding-top: var(--sp-5);
   padding-bottom: var(--sp-6);

@@ -16,6 +16,7 @@
   --surface: #0F1829;
   --border: #1E2A3F;
   --borda: var(--border);
+  --borda-forte: #5F6B84; /* 3,8:1 sobre o fundo; borda de controle precisa de 3:1 */
   --text: #F5F0E8;
   --text-dim: #7A849A;
 

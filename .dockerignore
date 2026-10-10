@@ -23,3 +23,6 @@ gerar_versao.bat
 gerar_versao.command
 restaurar_ultima_versao.bat
 restaurar_ultima_versao.command
+
+dist/
+scripts/

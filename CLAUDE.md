@@ -38,6 +38,11 @@ Container no EasyPanel (Docker), HTTPS via Traefik. Sem banco e sem estado, ent�
 não precisa de volume persistente. Esta página SUBSTITUI o evhira.com atual (mesmo domínio).
 `gunicorn -w 2 -b 0.0.0.0:8000 app:app` (no Dockerfile).
 
+## Publicação alternativa (Hostinger, arquivos prontos)
+
+`python scripts/exportar_estatico.py` gera `dist/portfolio-evhira.zip` (index.html, static/ e .htaccess com os
+mesmos 6 headers) para extrair na `public_html` da Hostinger. O Flask segue como fonte: mudou texto ou CSS, gere de novo.
+
 ## Módulos
 
 - `app.py`: único .py da raiz. Guarda o número de WhatsApp e o e-mail do CTA (constantes no topo). Rota `/` (a página) e `/health`,

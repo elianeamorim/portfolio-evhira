@@ -14,3 +14,6 @@ gerar_versao.bat
 gerar_versao.command
 restaurar_ultima_versao.bat
 restaurar_ultima_versao.command
+
+# Versao em arquivos prontos (gerada por scripts/exportar_estatico.py)
+dist/

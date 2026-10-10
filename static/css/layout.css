@@ -81,12 +81,14 @@
 
 .quem {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 0.55fr 1.45fr;
   align-items: start;
   gap: var(--sp-5);
 }
 
 .quem-texto { display: flex; flex-direction: column; gap: var(--sp-4); }
+
+.quem-conteudo { display: flex; flex-direction: column; gap: var(--sp-5); }
 
 .rodape {
   display: flex;
@@ -102,6 +104,7 @@
 
 @media (max-width: 860px) {
   .hero, .quem { grid-template-columns: 1fr; }
+  .foto-quem { max-width: 240px; }
   .hero-marca { max-width: 360px; width: 100%; justify-self: center; }
 }
 

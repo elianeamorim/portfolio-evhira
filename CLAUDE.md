@@ -34,14 +34,16 @@ python app.py             # http://127.0.0.1:5000
 
 ## Como publicar
 
-Container no EasyPanel (Docker), HTTPS via Traefik. Sem banco e sem estado, então
-não precisa de volume persistente. Esta página SUBSTITUI o evhira.com atual (mesmo domínio).
-`gunicorn -w 2 -b 0.0.0.0:8000 app:app` (no Dockerfile).
+PRODUÇÃO (evhira.com): versão em arquivos prontos na `public_html` da Hostinger. Gere com
+`python scripts/exportar_estatico.py` e envie o conteúdo de `dist/` (a pasta `static`, o `index.html` e o `.htaccess`).
+Antes de trocar, baixe um ZIP da `public_html` como backup. DNS e e-mail do domínio não são tocados.
+TESTE: container no EasyPanel (Docker), build por Dockerfile a partir do GitHub `elianeamorim/portfolio-evhira`
+(branch main, porta 8000, HTTPS via Traefik): https://evhira-portfolio.kbls3t.easypanel.host. Sem banco e sem estado,
+não precisa de volume. `gunicorn -w 2 -b 0.0.0.0:8000 app:app` (no Dockerfile).
 
-## Publicação alternativa (Hostinger, arquivos prontos)
+## Fonte da verdade
 
-`python scripts/exportar_estatico.py` gera `dist/portfolio-evhira.zip` (index.html, static/ e .htaccess com os
-mesmos 6 headers) para extrair na `public_html` da Hostinger. O Flask segue como fonte: mudou texto ou CSS, gere de novo.
+O Flask (`app.py`, `templates/`, `static/`) é a fonte. Mudou texto, imagem ou CSS: gere `dist/` de novo e republique nos dois lugares.
 
 ## Módulos
 

@@ -106,7 +106,17 @@
 }
 
 @media (max-width: 640px) {
-  .topo-nav { display: none; }
+  /* Celular: o menu desce para uma segunda linha, com alvos de 44px */
+  .topo { flex-wrap: wrap; gap: var(--sp-2) var(--sp-4); }
+  .topo-nav {
+    order: 3;
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    border-top: 1px solid var(--borda);
+  }
+  .topo-nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .pagina, .contido { padding-left: var(--sp-4); padding-right: var(--sp-4); }
   .cta-direita { flex-wrap: wrap; }
 }

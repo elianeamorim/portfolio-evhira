@@ -17,3 +17,5 @@ restaurar_ultima_versao.command
 
 # Versao em arquivos prontos (gerada por scripts/exportar_estatico.py)
 dist/
+
+divulgacao/

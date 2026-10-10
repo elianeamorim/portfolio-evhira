@@ -7,7 +7,7 @@
 
 ## STACK TRAVADA
 
-- **Framework:** Flask 3.1 + Jinja2 (mínimo, 1 rota)
+- **Framework:** Flask 3.1 + Jinja2 (mínimo, 2 rotas: / e /health)
 - **Tipo:** Pagina_Web_Simples (regime WEB, segurança obrigatória, leve por não ter login nem estado)
 - **Banco:** nenhum (a página não guarda dado; o CTA vai pro WhatsApp)
 - **Python:** 3.13
@@ -47,6 +47,7 @@ O Flask (`app.py`, `templates/`, `static/`) é a fonte. Mudou texto, imagem ou C
 
 ## Módulos
 
+- `scripts/exportar_estatico.py`: gera `dist/` (HTML + static + .htaccess + ZIP) pra publicar na Hostinger. Não faz parte do app em execução.
 - `app.py`: único .py da raiz. Guarda o número de WhatsApp e o e-mail do CTA (constantes no topo). Rota `/` (a página) e `/health`,
   mais `after_request` com os headers de segurança.
 
